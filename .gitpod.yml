@@ -1,7 +1,7 @@
 tasks:
   - before: >
       composer self-update --1
-      wget -qOdatabase-setup.sh https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/gitpod/backend/php/gitpod-setup.sh &&
+      wget -qO database-setup.sh https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/gitpod/backend/php/gitpod-setup.sh &&
       chmod 0755 database-setup.sh &&
       bash database-setup.sh 7.1
     init: composer update && composer install && npm i && php artisan key:generate
